@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gras_savoye/main.dart';
 import 'package:gras_savoye/my_home.dart';
+import 'package:gras_savoye/reset_pass.dart';
 
 
 class Login extends StatefulWidget {
@@ -68,10 +69,10 @@ class _LoginState extends State<Login> {
                         padding: const EdgeInsets.only(top: 10),
                         child: GestureDetector(
                           onTap: (){},
-                          child: const Icon(
-
-                            Icons.monitor_heart_sharp,
-                            size: 60.0,
+                          child:     Image.asset(
+                            'images/company_logo.png',
+                            height: 80,
+                            fit: BoxFit.fill,
                           ),
                         )),
                     ],
@@ -197,7 +198,7 @@ class _LoginState extends State<Login> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => MyApp() /*Reset passwd()*/));
+                                    builder: (context) => ResetPass() /*Reset passwd()*/));
                             },
                           child: Text(
                           'Forgot password ?',
