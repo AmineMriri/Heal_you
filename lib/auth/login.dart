@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gras_savoye/main.dart';
 import 'package:gras_savoye/my_home.dart';
-import 'package:gras_savoye/reset_pass.dart';
+import 'package:gras_savoye/auth/reset_pass.dart';
 
 
 class Login extends StatefulWidget {

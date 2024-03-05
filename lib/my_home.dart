@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gras_savoye/login.dart';
-
+import 'auth/login.dart';
+import 'drawer.dart';
 
 class MyHome extends StatefulWidget{
   @override
@@ -17,6 +17,38 @@ class _MyHomeState extends State<MyHome>{
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBar(backgroundColor:Colors.blue.shade600 , actions: <Widget>[
+          // Expanded(child: const drawer()),
+          // SizedBox(height: 10),
+          SizedBox(
+            width: 20,
+          ),
+          Padding(
+              padding: EdgeInsets.only(right: 10.0, top: 20),
+              child: GestureDetector(
+                onTap: () async {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Login() ));
+                },
+                child: Icon(
+                  Icons.logout,
+                  size: 30.0,
+                  color: Colors.black54,
+                ),
+              )),
+          // SizedBox(height: 10),
+        ]),
+      ),
+      drawer: const drawer(),
+
+
+
+
+      // temporary button
       body: Container(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -48,6 +80,12 @@ class _MyHomeState extends State<MyHome>{
         ),
         ),
       ),
+
+
+
+
+
+
     );
   }
 
