@@ -44,9 +44,9 @@ class _ResetPass extends State<ResetPass> {
               children: [
                 Center(
                   child: Container(
-                    padding: EdgeInsets.only(top: 130),
+                    padding: EdgeInsets.only(top: 60),
                     child: Text(
-                      'MEDOC\n',
+                      'Portail Adhérent \n',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 33,
@@ -61,20 +61,21 @@ class _ResetPass extends State<ResetPass> {
                   padding: const EdgeInsets.only(top: 10),
                   child: GestureDetector(
                     onTap: () {},
-                    child: const Icon(
-                      Icons.monitor_heart_sharp,
-                      size: 60.0,
-                    ),
+                    child: Image.asset(
+                      'images/company_logo.png',
+                      height: 80,
+                      fit: BoxFit.fill,
+                      ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 30),
+                  padding: const EdgeInsets.only(top: 20),
                   child: Text(
                     'Receive an email to reset your password',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       decoration: TextDecoration.none,
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 23,
                     ),
                   ),
@@ -95,7 +96,7 @@ class _ResetPass extends State<ResetPass> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 120,
+                              height: 60,
                             ),
                             TextFormField(
                               controller: emailController,

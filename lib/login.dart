@@ -52,7 +52,7 @@ class _LoginState extends State<Login> {
                         children: [
                             Center(
                               child: Container(
-                                padding: EdgeInsets.only(top: 130),
+                                padding: EdgeInsets.only(top: 60),
                                 child: Text(
                                   'Portail Adhérent \n',
                                   style: TextStyle(
@@ -69,7 +69,7 @@ class _LoginState extends State<Login> {
                         padding: const EdgeInsets.only(top: 10),
                         child: GestureDetector(
                           onTap: (){},
-                          child:     Image.asset(
+                          child:Image.asset(
                             'images/company_logo.png',
                             height: 80,
                             fit: BoxFit.fill,
